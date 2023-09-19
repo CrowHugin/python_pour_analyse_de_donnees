@@ -40,3 +40,31 @@ avg_grade = student_data[1].mean()"""
 
 #{:.2f} sert à afficher uniquement deux nombres après la virgule et le \ à aller à la ligne
 """print('Average study hours: {:.2f}\nAverage grade: {:.2f}'.format(avg_study, avg_grade))"""
+
+"""--------------------------------------Partie Pandas------------------------------------------------------"""
+
+
+import pandas as pd
+
+df_students = pd.DataFrame({'Name': ['Dan', 'Joann', 'Pedro', 'Rosie', 'Ethan', 'Vicky', 'Frederic', 'Jimmie', 
+                                     'Rhonda', 'Giovanni', 'Francesca', 'Rajab', 'Naiyana', 'Kian', 'Jenny',
+                                     'Jakeem','Helena','Ismat','Anila','Skye','Daniel','Aisha'],
+                            'StudyHours':student_data[0],
+                            'Grade':student_data[1]})
+
+#print(df_students) 
+
+
+"""--------------------------------------Partie DataFrame------------------------------------------------------"""
+
+#permet d'avoir les info de la 5eme collone 
+"""h=df_students.loc[5]
+print(h)"""
+
+#permet d'avoir les infos de la 1ere à la 5eme collone  (0 à 5)
+"""h=df_students.loc[0:5]
+print(h)"""
+
+#permet d'avoir les infos de la 1ere à la 5eme collone  (0 à 4)
+"""h=df_students.iloc[0:5]
+print(h)"""

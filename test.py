@@ -65,6 +65,25 @@ print(h)"""
 """h=df_students.loc[0:5]
 print(h)"""
 
-#permet d'avoir les infos de la 1ere à la 5eme collone  (0 à 4)
+#permet d'avoir les infos de la 1ere à la 5eme collone  (0 à 4) par la position
 """h=df_students.iloc[0:5]
 print(h)"""
+
+#va chercher les infos des colonnes  1 et 2 et de la ligne 0 
+"""h=df_students.iloc[0,[1,2]]
+print(h)"""
+
+#va chercher l'élément 0 dans le colonne nomée : Grade
+"""h=df_students.loc[0,'Grade']
+print(h)"""
+
+#va chercher les infos en fonction du nom
+"""h=df_students.loc[df_students['Name']=='Aisha']
+print(h)"""
+
+#same as before mais écrit d'une manière différente
+"""df_students[df_students['Name']=='Aisha']"""
+
+#same as before but w/ query fonction
+"""df_students.query('Name=="Aisha"')"""
+

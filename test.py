@@ -1,4 +1,5 @@
 import numpy as np
+import wget
 
 data = [50,50,47,97,49,3,53,42,26,74,82,62,37,15,70,27,36,35,48,52,63,64]
 grades=np.array(data)
@@ -87,3 +88,8 @@ print(h)"""
 #same as before but w/ query fonction
 """df_students.query('Name=="Aisha"')"""
 
+#prendre les données d'un site
+wget.download("https://raw.githubusercontent.com/MicrosoftDocs/mslearn-introduction-to-machine-learning/main/Data/ml-basics/grades.csv")
+df_students = pd.read_csv('grades.csv',delimiter=',',header='infer')
+h=df_students.head()
+print(h)
